@@ -1,48 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agautier <agautier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 21:41:02 by agautier          #+#    #+#             */
-/*   Updated: 2021/11/17 15:38:08 by agautier         ###   ########.fr       */
+/*   Updated: 2021/11/17 15:41:37 by agautier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
+#include "WrongCat.hpp"
 #include <iostream>
 
 /*
 **	Default constructor.
 */
-Cat::Cat(void) : Animal("Cat") {
-	std::cout << "Cat default constructor called." << std::endl;
+WrongCat::WrongCat(void) : WrongAnimal("WrongCat") {
+	std::cout << "WrongCat default constructor called." << std::endl;
 }
 
 /*
 **	Copy constructor.
 */
-Cat::Cat(Cat const& c) {
-	*this = c;
-	std::cout << "Cat copy constructor called." << std::endl;
+WrongCat::WrongCat(WrongCat const& wc) {
+	*this = wc;
+	std::cout << "WrongCat copy constructor called." << std::endl;
 }
 
 /*
 **	Destructor.
 */
-Cat::~Cat(void) { std::cout << "Cat Destructor called." << std::endl; }
+WrongCat::~WrongCat(void) {
+	std::cout << "WrongCat Destructor called." << std::endl;
+}
 
 /*
 **	Makes the cat sound.
 */
-std::string const Cat::makeSound(void) const { return ("Miaou"); }
+std::string const WrongCat::makeSound(void) const { return ("Wrong Miaou"); }
 
 /*
 **	Assignment operator.
 */
-Cat& Cat::operator=(Cat const&) {
-	std::cout << "Cat assignment operator called." << std::endl;
+WrongCat& WrongCat::operator=(WrongCat const&) {
+	std::cout << "WrongCat assignment operator called." << std::endl;
 	return (*this);
 }
 

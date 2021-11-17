@@ -6,7 +6,7 @@
 /*   By: agautier <agautier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 21:40:44 by agautier          #+#    #+#             */
-/*   Updated: 2021/11/16 22:04:22 by agautier         ###   ########.fr       */
+/*   Updated: 2021/11/17 15:37:36 by agautier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Cat: public Animal {
 
 		virtual ~Cat(void);
 
-		std::string const makeSound(void) const;
+		virtual std::string const makeSound(void) const;
 
 		Cat& operator=(Cat const&);
 };
