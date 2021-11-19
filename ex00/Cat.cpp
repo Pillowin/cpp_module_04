@@ -6,7 +6,7 @@
 /*   By: agautier <agautier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 21:41:02 by agautier          #+#    #+#             */
-/*   Updated: 2021/11/17 15:38:08 by agautier         ###   ########.fr       */
+/*   Updated: 2021/11/19 16:30:31 by agautier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ Cat::~Cat(void) { std::cout << "Cat Destructor called." << std::endl; }
 /*
 **	Makes the cat sound.
 */
-std::string const Cat::makeSound(void) const { return ("Miaou"); }
+std::string const Cat::makeSound(void) const { return ("Meow"); }
 
 /*
 **	Assignment operator.
