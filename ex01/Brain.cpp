@@ -6,7 +6,7 @@
 /*   By: agautier <agautier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 16:01:26 by agautier          #+#    #+#             */
-/*   Updated: 2021/11/19 17:26:31 by agautier         ###   ########.fr       */
+/*   Updated: 2021/11/19 18:58:46 by agautier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,10 @@ void Brain::printIdeas(void) const {
 **	Setter for idea.
 */
 void Brain::setIdea(std::string const& idea) {
+	if (_nb_idea >= NB_IDEA) {
+		std::cout << "Brain is full." << std::endl;
+		return;
+	}
 	ideas[_nb_idea] = idea;
 	_nb_idea += 1;
 }
