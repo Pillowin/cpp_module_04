@@ -1,40 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   AMateria.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agautier <agautier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/17 16:00:02 by agautier          #+#    #+#             */
-/*   Updated: 2021/11/21 18:40:58 by agautier         ###   ########.fr       */
+/*   Created: 2021/11/20 16:02:39 by agautier          #+#    #+#             */
+/*   Updated: 2021/11/20 16:06:30 by agautier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BRAIN_HPP
-#define BRAIN_HPP
+#include "AMateria.hpp"
 
-#include <string>
+/*
+**	Default constructor.
+*/
+AMateria::AMateria(void) {}
 
-#define NB_IDEA 100
+/*
+**	Copy constructor.
+*/
+AMateria::AMateria(AMateria const& sample) { *this = sample; }
 
-class Brain {
-	public:
-		Brain(void);
-		Brain(Brain const& b);
+/*
+**	Destructor.
+*/
+AMateria::~AMateria(void) {}
 
-		virtual ~Brain(void);
-
-		void setIdea(std::string const& idea);
-		void printIdeas(void) const;
-
-		Brain& operator=(Brain const& b);
-
-	protected:
-		std::string ideas[NB_IDEA];
-
-	private:
-		unsigned char _nb_idea;
-};
-
-#endif
+/*
+**	Assignment operator.
+*/
+AMateria& AMateria::operator=(AMateria const& sample) {
+	if (this == &sample)
+		return (*this);
+	return (*this);
+}
 

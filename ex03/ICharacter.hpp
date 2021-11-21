@@ -1,39 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   ICharacter.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agautier <agautier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/17 16:00:02 by agautier          #+#    #+#             */
-/*   Updated: 2021/11/21 18:40:58 by agautier         ###   ########.fr       */
+/*   Created: 2021/11/20 16:07:00 by agautier          #+#    #+#             */
+/*   Updated: 2021/11/20 21:44:43 by agautier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BRAIN_HPP
-#define BRAIN_HPP
+#ifndef ICHARACTER_HPP
+#define ICHARACTER_HPP
 
 #include <string>
 
-#define NB_IDEA 100
+class AMateria;
 
-class Brain {
+class ICharacter {
 	public:
-		Brain(void);
-		Brain(Brain const& b);
+		virtual ~ICharacter(void);
 
-		virtual ~Brain(void);
+		virtual void equip(AMateria* m)				  = 0;
+		virtual void unequip(int idx)				  = 0;
+		virtual void use(int idx, ICharacter& target) = 0;
 
-		void setIdea(std::string const& idea);
-		void printIdeas(void) const;
-
-		Brain& operator=(Brain const& b);
-
-	protected:
-		std::string ideas[NB_IDEA];
-
-	private:
-		unsigned char _nb_idea;
+		virtual std::string const& getNAme() const = 0;
 };
 
 #endif

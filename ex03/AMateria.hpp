@@ -1,39 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   AMateria.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agautier <agautier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/17 16:00:02 by agautier          #+#    #+#             */
-/*   Updated: 2021/11/21 18:40:58 by agautier         ###   ########.fr       */
+/*   Created: 2021/11/20 16:02:38 by agautier          #+#    #+#             */
+/*   Updated: 2021/11/20 16:23:34 by agautier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BRAIN_HPP
-#define BRAIN_HPP
+#ifndef AAMATERIA_HPP
+#define AAMATERIA_HPP
 
+#include "ICharacter.hpp"
 #include <string>
 
-#define NB_IDEA 100
-
-class Brain {
+class AMateria {
 	public:
-		Brain(void);
-		Brain(Brain const& b);
+		AMateria(void);
+		AMateria(AMateria const& m);
+		AMateria(std::string const& type);
 
-		virtual ~Brain(void);
+		virtual ~AMateria(void);
 
-		void setIdea(std::string const& idea);
-		void printIdeas(void) const;
+		std::string const& getType() const;
 
-		Brain& operator=(Brain const& b);
+		virtual AMateria* clone() const = 0;
+		virtual void use(ICharacter& target);
 
-	protected:
-		std::string ideas[NB_IDEA];
-
-	private:
-		unsigned char _nb_idea;
+		AMateria& operator=(AMateria const& m);
 };
 
 #endif
