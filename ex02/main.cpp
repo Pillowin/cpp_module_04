@@ -6,11 +6,11 @@
 /*   By: agautier <agautier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 21:31:19 by agautier          #+#    #+#             */
-/*   Updated: 2021/11/22 00:22:37 by agautier         ###   ########.fr       */
+/*   Updated: 2021/11/22 00:25:59 by agautier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Brain.hpp"
 #include "Cat.hpp"
 #include "Dog.hpp"
@@ -18,8 +18,8 @@
 #include <iostream>
 
 int main(void) {
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
+	const AAnimal* j = new Dog();
+	const AAnimal* i = new Cat();
 
 	delete j; // should not create a leak
 	delete i;
@@ -28,7 +28,7 @@ int main(void) {
 			  << "---------------------Now testing with an array" << std::endl
 			  << std::endl;
 
-	const Animal* animals[10];
+	const AAnimal* animals[10];
 
 	for (unsigned char i = 0; i < 10; i++)
 		i < 10 / 2 ? animals[i] = new Dog : animals[i] = new Cat;
