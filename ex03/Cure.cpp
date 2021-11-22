@@ -1,57 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AMateria.cpp                                       :+:      :+:    :+:   */
+/*   Cure.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agautier <agautier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/20 16:02:39 by agautier          #+#    #+#             */
-/*   Updated: 2021/11/23 00:29:51 by agautier         ###   ########.fr       */
+/*   Created: 2021/11/22 17:32:28 by agautier          #+#    #+#             */
+/*   Updated: 2021/11/22 23:47:50 by agautier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "AMateria.hpp"
-#include <string>
+#include "Cure.hpp"
+#include <iostream>
 
 /*
 **	Default constructor.
 */
-AMateria::AMateria(void) : type("Unknow") {}
+Cure::Cure(void) : AMateria("cure") {}
 
 /*
 **	Copy constructor.
 */
-AMateria::AMateria(AMateria const& m) { *this = m; }
-
-/*
-**	Parametric constructor.
-*/
-AMateria::AMateria(std::string const& type) : type(type) {}
+Cure::Cure(Cure const& c) : AMateria(c) { *this = c; }
 
 /*
 **	Destructor.
 */
-AMateria::~AMateria(void) {}
+Cure::~Cure(void) {}
 
 /*
-**	Getter for materia type.
+**	Returns a new instance of the real Materia's type.
 */
-std::string const& AMateria::getType(void) const { return type; }
+AMateria* Cure::clone(void) const { return new Cure(); }
 
 /*
-**
+**	Apply materia effect to target.
 */
-void AMateria::use(ICharacter& target) {
-	// TODO: ?
+void Cure::use(ICharacter& target) const {
+	std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl;
 }
-
 /*
 **	Assignment operator.
 */
-AMateria& AMateria::operator=(AMateria const& m) {
-	if (this == &m)
+Cure& Cure::operator=(Cure const& c) {
+	if (this == &c)
 		return (*this);
-	type = m.type;
+	AMateria::operator=(c);
 	return (*this);
 }
 

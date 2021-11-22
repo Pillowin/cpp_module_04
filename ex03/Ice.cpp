@@ -1,57 +1,53 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AMateria.cpp                                       :+:      :+:    :+:   */
+/*   Ice.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agautier <agautier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/20 16:02:39 by agautier          #+#    #+#             */
-/*   Updated: 2021/11/23 00:29:51 by agautier         ###   ########.fr       */
+/*   Created: 2021/11/22 17:32:01 by agautier          #+#    #+#             */
+/*   Updated: 2021/11/22 23:47:02 by agautier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "AMateria.hpp"
-#include <string>
+#include "Ice.hpp"
+#include <iostream>
 
 /*
 **	Default constructor.
 */
-AMateria::AMateria(void) : type("Unknow") {}
+Ice::Ice(void) : AMateria("ice") {}
 
 /*
 **	Copy constructor.
 */
-AMateria::AMateria(AMateria const& m) { *this = m; }
-
-/*
-**	Parametric constructor.
-*/
-AMateria::AMateria(std::string const& type) : type(type) {}
+Ice::Ice(Ice const& i) : AMateria(i) { *this = i; }
 
 /*
 **	Destructor.
 */
-AMateria::~AMateria(void) {}
+Ice::~Ice(void) {}
 
 /*
-**	Getter for materia type.
+**	Returns a new instance of the real Materia's type.
 */
-std::string const& AMateria::getType(void) const { return type; }
+AMateria* Ice::clone(void) const { return new Ice(); }
 
 /*
-**
+**	Apply materia effect to target.
 */
-void AMateria::use(ICharacter& target) {
-	// TODO: ?
+void Ice::use(ICharacter& target) const {
+	std::cout << "* shoots an ice bolt at " << target.getName() << " *"
+			  << std::endl;
 }
 
 /*
 **	Assignment operator.
 */
-AMateria& AMateria::operator=(AMateria const& m) {
-	if (this == &m)
+Ice& Ice::operator=(Ice const& i) {
+	if (this == &i)
 		return (*this);
-	type = m.type;
+	AMateria::operator=(i);
 	return (*this);
 }
 
