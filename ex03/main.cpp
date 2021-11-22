@@ -6,7 +6,7 @@
 /*   By: agautier <agautier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 21:31:19 by agautier          #+#    #+#             */
-/*   Updated: 2021/11/23 00:38:52 by agautier         ###   ########.fr       */
+/*   Updated: 2021/11/23 00:45:45 by agautier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@
 // TODO: virtual void use(ICharacter& target); implement in AMateria ?
 // TODO: MateriaSource::learnMateria()
 // TODO: MateriaSource::createMateria
+// TODO: deep copy of Character inventory
 
 int main(void) {
 	IMateriaSource* src = new MateriaSource();
