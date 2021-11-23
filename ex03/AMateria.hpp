@@ -6,7 +6,7 @@
 /*   By: agautier <agautier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 16:02:38 by agautier          #+#    #+#             */
-/*   Updated: 2021/11/23 00:22:51 by agautier         ###   ########.fr       */
+/*   Updated: 2021/11/23 01:08:30 by agautier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ class AMateria {
 		virtual ~AMateria(void);
 
 		std::string const& getType(void) const;
-		std::string const& getType(void);
 
 		virtual AMateria* clone(void) const = 0;
 		virtual void use(ICharacter& target);

@@ -6,7 +6,7 @@
 /*   By: agautier <agautier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 23:13:47 by agautier          #+#    #+#             */
-/*   Updated: 2021/11/23 00:19:42 by agautier         ###   ########.fr       */
+/*   Updated: 2021/11/23 00:58:24 by agautier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,10 @@ MateriaSource::MateriaSource(MateriaSource const& m) { *this = m; }
 /*
 **	Destructor.
 */
-MateriaSource::~MateriaSource(void) {}
+MateriaSource::~MateriaSource(void) {
+	for (unsigned char i = 0; i < MAX_SOURCE; i++)
+		delete _source[i];
+}
 
 /*
 **	Copy Materia passed as parameter and store it in memory to be cloned later.

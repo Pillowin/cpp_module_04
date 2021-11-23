@@ -6,7 +6,7 @@
 /*   By: agautier <agautier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 17:32:01 by agautier          #+#    #+#             */
-/*   Updated: 2021/11/22 23:47:02 by agautier         ###   ########.fr       */
+/*   Updated: 2021/11/23 01:01:59 by agautier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ Ice::~Ice(void) {}
 /*
 **	Returns a new instance of the real Materia's type.
 */
-AMateria* Ice::clone(void) const { return new Ice(); }
+AMateria* Ice::clone(void) const { return (new Ice()); }
 
 /*
 **	Apply materia effect to target.

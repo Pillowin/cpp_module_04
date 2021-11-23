@@ -6,7 +6,7 @@
 /*   By: agautier <agautier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 23:13:52 by agautier          #+#    #+#             */
-/*   Updated: 2021/11/23 00:21:33 by agautier         ###   ########.fr       */
+/*   Updated: 2021/11/23 00:56:46 by agautier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #define MATERIA_SOURCE_HPP
 
 #include "IMateriaSource.hpp"
+
+#define MAX_SOURCE 4
 
 class MateriaSource: public IMateriaSource {
 	public:
@@ -28,7 +30,7 @@ class MateriaSource: public IMateriaSource {
 		MateriaSource& operator=(MateriaSource const& m);
 
 	private:
-		AMateria* _source; // TODO:
+		AMateria* _source[MAX_SOURCE];
 };
 
 #endif
