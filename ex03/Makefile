@@ -6,11 +6,11 @@
 #    By: agautier <agautier@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/29 11:37:11 by agautier          #+#    #+#              #
-#    Updated: 2021/11/16 21:30:08 by agautier         ###   ########.fr        #
+#    Updated: 2021/11/24 00:11:40 by agautier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	animals
+NAME	=	materia
 SRC		=	$(wildcard *.cpp)
 
 include ../template.mk

@@ -6,7 +6,7 @@
 /*   By: agautier <agautier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 18:16:13 by agautier          #+#    #+#             */
-/*   Updated: 2021/11/23 00:07:20 by agautier         ###   ########.fr       */
+/*   Updated: 2021/11/24 00:15:17 by agautier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,7 @@ void Character::use(int idx, ICharacter& target) {
 /*
 **	Assignment operator.
 */
+// TODO: REVOIR?
 Character& Character::operator=(Character const& c) {
 	if (this == &c)
 		return (*this);

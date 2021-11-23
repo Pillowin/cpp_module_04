@@ -6,7 +6,7 @@
 /*   By: agautier <agautier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 18:16:09 by agautier          #+#    #+#             */
-/*   Updated: 2021/11/22 23:54:58 by agautier         ###   ########.fr       */
+/*   Updated: 2021/11/23 23:11:27 by agautier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,3 @@ class Character: public ICharacter {
 };
 
 #endif
-

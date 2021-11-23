@@ -6,17 +6,16 @@
 /*   By: agautier <agautier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 16:02:39 by agautier          #+#    #+#             */
-/*   Updated: 2021/11/23 01:02:50 by agautier         ###   ########.fr       */
+/*   Updated: 2021/11/24 00:11:15 by agautier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AMateria.hpp"
-#include <string>
 
 /*
 **	Default constructor.
 */
-AMateria::AMateria(void) : type("Unknow") {}
+AMateria::AMateria(void) : type("UnknowMateria") {}
 
 /*
 **	Copy constructor.
@@ -41,13 +40,14 @@ std::string const& AMateria::getType(void) const { return type; }
 /*
 **
 */
-void AMateria::use(ICharacter& target) {
-	// TODO: ?
+void AMateria::use(ICharacter& target) const {
+	std::cout << "Using unknown Materia on " << target.getName() << std::endl;
 }
 
 /*
 **	Assignment operator.
 */
+// TODO: Copie type na pas de sens?!
 AMateria& AMateria::operator=(AMateria const& m) {
 	if (this == &m)
 		return (*this);

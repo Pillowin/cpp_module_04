@@ -6,7 +6,7 @@
 /*   By: agautier <agautier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 17:32:00 by agautier          #+#    #+#             */
-/*   Updated: 2021/11/22 23:45:59 by agautier         ###   ########.fr       */
+/*   Updated: 2021/11/23 23:24:04 by agautier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,6 @@ class Ice: public AMateria {
 
 		virtual ~Ice(void);
 
-		std::string const& getType(void) const;
-
 		AMateria* clone(void) const;
 		void use(ICharacter& target) const;
 
@@ -31,4 +29,3 @@ class Ice: public AMateria {
 };
 
 #endif
-
