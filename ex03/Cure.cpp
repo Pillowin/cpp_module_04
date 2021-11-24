@@ -6,7 +6,7 @@
 /*   By: agautier <agautier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 17:32:28 by agautier          #+#    #+#             */
-/*   Updated: 2021/11/22 23:47:50 by agautier         ###   ########.fr       */
+/*   Updated: 2021/11/24 15:54:31 by agautier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ Cure::~Cure(void) {}
 /*
 **	Returns a new instance of the real Materia's type.
 */
-AMateria* Cure::clone(void) const { return new Cure(); }
+AMateria* Cure::clone(void) const { return new Cure(*this); }
 
 /*
 **	Apply materia effect to target.

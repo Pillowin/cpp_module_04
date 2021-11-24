@@ -6,7 +6,7 @@
 /*   By: agautier <agautier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 18:16:13 by agautier          #+#    #+#             */
-/*   Updated: 2021/11/24 00:15:17 by agautier         ###   ########.fr       */
+/*   Updated: 2021/11/24 18:40:06 by agautier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,9 @@ Character::Character(std::string const& name) : _name(name), _slot(0) {}
 **	Destructor.
 */
 Character::~Character(void) {
-	for (unsigned char i = 0; i < 4; i++)
-		delete _inventory[i];
+	for (unsigned char i = 0; i < _slot; i++)
+		if (_inventory[i] != NULL)
+			delete _inventory[i];
 }
 
 /*
@@ -71,6 +72,21 @@ void Character::use(int idx, ICharacter& target) {
 }
 
 /*
+**	Print character inventory.
+*/
+void Character::printInventory(void) const {
+	std::cout << "Inventory addr = " << _inventory << std::endl;
+	for (unsigned char i = 0; i < _slot; i++) {
+		if (_inventory[i])
+			std::cout << "[" << (unsigned int)i << "] " << _inventory[i] << " "
+					  << _inventory[i]->getType() << std::endl;
+		else
+			std::cout << "[" << (unsigned int)i << "] " << _inventory[i]
+					  << std::endl;
+	}
+}
+
+/*
 **	Assignment operator.
 */
 // TODO: REVOIR?
@@ -78,9 +94,12 @@ Character& Character::operator=(Character const& c) {
 	if (this == &c)
 		return (*this);
 	_name = c._name;
+	for (unsigned char i = 0; i < _slot; i++)
+		if (_inventory[i] != NULL)
+			delete _inventory[i];
 	_slot = c._slot;
 	for (unsigned char i = 0; i < _slot; i++)
-		_inventory[i] = c._inventory[i];
+		_inventory[i] = c._inventory[i]->clone();
 	return (*this);
 }
 

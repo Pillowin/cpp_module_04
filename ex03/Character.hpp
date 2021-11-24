@@ -6,7 +6,7 @@
 /*   By: agautier <agautier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 18:16:09 by agautier          #+#    #+#             */
-/*   Updated: 2021/11/23 23:11:27 by agautier         ###   ########.fr       */
+/*   Updated: 2021/11/24 18:38:19 by agautier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ class Character: public ICharacter {
 		void equip(AMateria* m);
 		void unequip(int idx);
 		void use(int idx, ICharacter& target);
+		void printInventory(void) const;
 
 		Character& operator=(Character const& c);
 

@@ -6,7 +6,7 @@
 /*   By: agautier <agautier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 23:13:52 by agautier          #+#    #+#             */
-/*   Updated: 2021/11/23 00:56:46 by agautier         ###   ########.fr       */
+/*   Updated: 2021/11/24 17:57:13 by agautier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ class MateriaSource: public IMateriaSource {
 
 		void learnMateria(AMateria* m);
 		AMateria* createMateria(std::string const& type);
+		void printSource(void) const;
 
 		MateriaSource& operator=(MateriaSource const& m);
 
