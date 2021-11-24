@@ -6,7 +6,7 @@
 /*   By: agautier <agautier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 23:13:47 by agautier          #+#    #+#             */
-/*   Updated: 2021/11/24 18:18:33 by agautier         ###   ########.fr       */
+/*   Updated: 2021/11/24 18:45:46 by agautier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 **	Default constructor.
 */
 MateriaSource::MateriaSource(void) {
-	std::cout << "MateriaSource default constructor" << std::endl;
 	for (unsigned char i = 0; i < MAX_SOURCE; i++)
 		_source[i] = NULL;
 }
@@ -24,10 +23,7 @@ MateriaSource::MateriaSource(void) {
 /*
 **	Copy constructor.
 */
-MateriaSource::MateriaSource(MateriaSource const& m) {
-	std::cout << "MateriaSource copy constructor" << std::endl;
-	*this = m;
-}
+MateriaSource::MateriaSource(MateriaSource const& m) { *this = m; }
 
 /*
 **	Destructor.
@@ -78,7 +74,6 @@ void MateriaSource::printSource(void) const {
 */
 // TODO: Deep copie
 MateriaSource& MateriaSource::operator=(MateriaSource const& m) {
-	std::cout << "MateriaSource assign" << std::endl;
 	if (this == &m)
 		return (*this);
 	for (unsigned char i = 0; i < MAX_SOURCE && _source[i]; i++)
