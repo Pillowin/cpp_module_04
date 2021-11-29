@@ -6,7 +6,7 @@
 /*   By: agautier <agautier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 21:31:19 by agautier          #+#    #+#             */
-/*   Updated: 2021/11/24 18:43:19 by agautier         ###   ########.fr       */
+/*   Updated: 2021/11/29 23:47:10 by agautier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,6 @@
 #include "Ice.hpp"
 #include "MateriaSource.hpp"
 #include <cstdlib>
-
-// TODO: While assigning a Materia to another, copying the type doesn’t make
-// sense...
-// TODO: deep copy of Character inventory
 
 int main(void) {
 	MateriaSource* src1 = new MateriaSource();
