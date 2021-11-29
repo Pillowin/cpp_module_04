@@ -6,7 +6,7 @@
 /*   By: agautier <agautier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 23:13:47 by agautier          #+#    #+#             */
-/*   Updated: 2021/11/24 18:45:46 by agautier         ###   ########.fr       */
+/*   Updated: 2021/11/29 23:57:00 by agautier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ MateriaSource::~MateriaSource(void) {
 /*
 **	Copy Materia passed as parameter and store it in memory to be cloned later.
 */
-// TODO: Un seul pointeur ou copie ?
 void MateriaSource::learnMateria(AMateria* m) {
 	unsigned char i;
 
@@ -72,7 +71,6 @@ void MateriaSource::printSource(void) const {
 /*
 **	Assignment operator.
 */
-// TODO: Deep copie
 MateriaSource& MateriaSource::operator=(MateriaSource const& m) {
 	if (this == &m)
 		return (*this);
@@ -83,4 +81,3 @@ MateriaSource& MateriaSource::operator=(MateriaSource const& m) {
 			_source[i] = m._source[i]->clone();
 	return (*this);
 }
-

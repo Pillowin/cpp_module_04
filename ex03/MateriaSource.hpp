@@ -6,7 +6,7 @@
 /*   By: agautier <agautier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 23:13:52 by agautier          #+#    #+#             */
-/*   Updated: 2021/11/24 17:57:13 by agautier         ###   ########.fr       */
+/*   Updated: 2021/11/29 23:57:08 by agautier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,3 @@ class MateriaSource: public IMateriaSource {
 };
 
 #endif
-

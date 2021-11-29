@@ -6,7 +6,7 @@
 /*   By: agautier <agautier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 18:16:13 by agautier          #+#    #+#             */
-/*   Updated: 2021/11/24 18:40:06 by agautier         ###   ########.fr       */
+/*   Updated: 2021/11/29 23:52:48 by agautier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,6 @@ void Character::printInventory(void) const {
 /*
 **	Assignment operator.
 */
-// TODO: REVOIR?
 Character& Character::operator=(Character const& c) {
 	if (this == &c)
 		return (*this);
@@ -102,4 +101,3 @@ Character& Character::operator=(Character const& c) {
 		_inventory[i] = c._inventory[i]->clone();
 	return (*this);
 }
-

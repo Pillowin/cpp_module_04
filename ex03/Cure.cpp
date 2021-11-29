@@ -6,7 +6,7 @@
 /*   By: agautier <agautier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 17:32:28 by agautier          #+#    #+#             */
-/*   Updated: 2021/11/24 15:54:31 by agautier         ###   ########.fr       */
+/*   Updated: 2021/11/29 23:57:28 by agautier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,4 +48,3 @@ Cure& Cure::operator=(Cure const& c) {
 	AMateria::operator=(c);
 	return (*this);
 }
-

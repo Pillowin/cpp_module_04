@@ -6,7 +6,7 @@
 /*   By: agautier <agautier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 17:32:25 by agautier          #+#    #+#             */
-/*   Updated: 2021/11/22 23:48:06 by agautier         ###   ########.fr       */
+/*   Updated: 2021/11/29 23:57:31 by agautier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,3 @@ class Cure: public AMateria {
 };
 
 #endif
-

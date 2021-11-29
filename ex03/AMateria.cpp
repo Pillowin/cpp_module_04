@@ -6,7 +6,7 @@
 /*   By: agautier <agautier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 16:02:39 by agautier          #+#    #+#             */
-/*   Updated: 2021/11/24 00:11:15 by agautier         ###   ########.fr       */
+/*   Updated: 2021/11/29 23:57:52 by agautier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,11 +47,9 @@ void AMateria::use(ICharacter& target) const {
 /*
 **	Assignment operator.
 */
-// TODO: Copie type na pas de sens?!
 AMateria& AMateria::operator=(AMateria const& m) {
 	if (this == &m)
 		return (*this);
 	type = m.type;
 	return (*this);
 }
-
