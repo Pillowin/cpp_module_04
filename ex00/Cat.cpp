@@ -6,7 +6,7 @@
 /*   By: agautier <agautier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 21:41:02 by agautier          #+#    #+#             */
-/*   Updated: 2021/11/19 16:30:31 by agautier         ###   ########.fr       */
+/*   Updated: 2021/12/04 18:51:05 by agautier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ Cat::Cat(void) : Animal("Cat") {
 /*
 **	Copy constructor.
 */
-Cat::Cat(Cat const& c) {
+Cat::Cat(Cat const& c) : Animal("Cat") {
 	*this = c;
 	std::cout << "Cat copy constructor called." << std::endl;
 }

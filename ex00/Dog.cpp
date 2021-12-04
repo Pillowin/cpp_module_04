@@ -6,7 +6,7 @@
 /*   By: agautier <agautier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 21:41:02 by agautier          #+#    #+#             */
-/*   Updated: 2021/11/16 22:03:50 by agautier         ###   ########.fr       */
+/*   Updated: 2021/12/04 18:51:28 by agautier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ Dog::Dog(void) : Animal("Dog") {
 /*
 **	Copy constructor.
 */
-Dog::Dog(Dog const& d) {
+Dog::Dog(Dog const& d) : Animal("Dog") {
 	*this = d;
 	std::cout << "Dog copy constructor called." << std::endl;
 }
